@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accounts Section</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Accounts Section</h1>
+        <button id="backButton" class="btn">Back to Parties</button>
+        <div class="date-picker-container">
+          <label for="orderDatePicker">Select Date:</label>
+          <input type="date" id="orderDatePicker" class="date-picker" />
+        </div>
+        <select id="orderStatusDropdown">
+          <option value="pending">Pending Orders</option>
+          <option value="completed">Completed Orders</option>
+      </select>
+        </div>
+      </div>
+      <div class="content">
+        <div class="orders-list">
+          <h2 id="orderListTitle">Pending Orders</h2>
+          <div class="orders-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="orders.js"></script>
+  </body>
+</html>
